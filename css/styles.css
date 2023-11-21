@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   margin: 0;
   padding: 20px;
 }
@@ -10,4 +10,38 @@ h1 {
   color: #333;
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
 
+li, .info {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid #E1E1E1;
+  background-color: white;
+}
+
+li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 35vw;
+  gap: 15px;
+  margin: 15px 10px;
+}
+
+.info {
+  min-width: 15vw;
+}
+
+li p{
+  margin: 0px;
+}
+
+.id {
+  width: 100px;
+  height: 100px;
+}
