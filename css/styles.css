@@ -19,7 +19,6 @@ ul {
 }
 
 li, .info {
-  padding: 10px;
   border-radius: 5px;
   border: solid #E1E1E1;
   background-color: white;
@@ -28,13 +27,17 @@ li, .info {
 li {
   display: inline-flex;
   flex-wrap: wrap;
-  width: 35vw;
-  gap: 15px;
+  padding: 10px;
   margin: 15px 10px;
+  width: 400px;
+  height: 150px;
 }
 
 .info {
-  min-width: 15vw;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  width: 260px;
+  height: min-content;
 }
 
 li p{
@@ -42,6 +45,8 @@ li p{
 }
 
 .id {
+  position: absolute;
+  margin-left: 300px;
   width: 100px;
   height: 100px;
 }

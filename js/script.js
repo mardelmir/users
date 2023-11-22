@@ -7,10 +7,17 @@ fetch('https://jsonplaceholder.typicode.com/users')
         } return response.json()
     })
     .then(data => {
-        console.log(data)
-        data.forEach((element) => {
-            const { id, name, username, phone, email, company, age = Math.floor(Math.random() * 66), address } = element
+        data.forEach(element => {
+            const { id, name, username, phone, email, company, address } = element
             const { street, suite, city } = address
+            const { name: workplace } = company
+
+            // He creado el array porque lo pedía el ejercicio, pero no entiendo muy bien para qué
+            const object = [name, username, phone, email, workplace, street, suite, city]
+            const age = Math.floor(Math.random() * (50 - 20) + 20)
+            const img = `../assets/img/${id}.jpeg`
+            const user = [img, age, ...object]
+
             const template = `
                 <li>
                 <div class="info">
@@ -20,9 +27,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
                     <strong>Teléfono:</strong> ${phone}<br />
                     <strong>Email:</strong> ${email}</p>
                 </div>
-                <img class="id" src="../assets/img/${id}.jpeg" alt="${name}"/>
-                <p><strong>Compañía:</strong> ${company.name}<br />
+                <p><strong>Compañía:</strong> ${workplace}<br />
                 <strong>Dirección:</strong> ${street}, ${suite}, ${city}</p>
+                <img class="id" src="${img}" alt="${name}"/>
                 </li>
                 `
             lista.innerHTML += template
