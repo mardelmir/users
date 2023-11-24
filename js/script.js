@@ -13,10 +13,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
             const { name: workplace } = company 
             const age = Math.floor(Math.random() * (50 - 20) + 20)
             const img = `../assets/img/${id}.jpeg`
-
+            
             const template = `
-                <li>
-                <div class="info">
+            <li>
+            <div class="info">
                     <p><strong>Nombre:</strong> ${name}<br />
                     <strong>Edad:</strong> ${age}<br />
                     <strong>Username:</strong> ${username}<br />
@@ -38,7 +38,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     })
 
 
-    
+
     // Corrección clase
 
 //     .then(users => {
@@ -80,3 +80,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
 //         `
 //     })
 // }
+
+
+// cmd d (repetir la d)
+// cmd mayus f (buscar en todo el proyecto)
+// cl tab (console.log())
+// cmd k c/u = cm shift 7 comenta y descomenta en html, css, js
+// TODO extensión 
+// cmd p busca entre archivos
+// option shift flecha abajo (copiar y pegar)
+// opt shift f (formatea)
