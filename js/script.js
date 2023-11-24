@@ -10,9 +10,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
         data.forEach(element => {
             const { id, name, username, phone, email, company, address } = element
             const { street, suite, city } = address
-            const { name: workplace } = company
+            const { name: workplace } = company // cambio de nombre la key porque ya hay otra con esa denominación
 
-            // He creado el array porque lo pedía el ejercicio, pero no entiendo muy bien para qué
+            // He creado el array porque lo pedía el ejercicio, pero no entiendo muy bien su uso
             const object = [name, username, phone, email, workplace, street, suite, city]
             const age = Math.floor(Math.random() * (50 - 20) + 20)
             const img = `../assets/img/${id}.jpeg`
